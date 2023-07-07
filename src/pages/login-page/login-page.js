@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const LoginPage = () => {
   const dispatch = useDispatch()
-  const user = useSelector(store => store.userReducer.user)
+  const user = useSelector(state => state.userReducer.user)
 
   return (
     <div>

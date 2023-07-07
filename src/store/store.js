@@ -11,11 +11,16 @@ const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_USER':
       return {
-        ...state,
-        email: action.payload.email
+        email: action.payload.email,
+        token: action.payload.token,
+        id: action.payload.id
       }
     case 'REMOVE_USER':
-      return 2
+      return {
+        email: null,
+        token: null,
+        id: null
+      }
     default:
       return state
   }
