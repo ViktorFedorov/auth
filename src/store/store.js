@@ -1,14 +1,30 @@
 import {createStore} from 'redux'
+import {combineReducers} from 'redux'
 
-const reducer = (state = 0, action) => {
+const initialState = {
+  email: null,
+  token: null,
+  id: null
+}
+
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'INC':
-      return state + 1
+    case 'SET_USER':
+      return {
+        ...state,
+        email: action.payload.email
+      }
+    case 'REMOVE_USER':
+      return 2
     default:
       return state
   }
 }
 
-const store = createStore(reducer)
+const rootReducer = combineReducers({
+  userReducer
+})
+
+const store = createStore(rootReducer)
 
 export default store
