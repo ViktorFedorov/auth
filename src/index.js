@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store/store'
 import 'bootswatch/dist/darkly/bootstrap.min.css'
+import './firebase'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -15,5 +16,5 @@ root.render(
         <App />
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
