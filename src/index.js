@@ -2,9 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/app/app'
 import './index.css'
-import {BrowserRouter} from 'react-router-dom'
-import {Provider} from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import store from './store/store'
+import 'bootswatch/dist/darkly/bootstrap.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -14,5 +15,5 @@ root.render(
         <App />
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 )

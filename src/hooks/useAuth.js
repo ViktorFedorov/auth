@@ -1,7 +1,7 @@
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 
 const useAuth = () => {
-  const {email, token, id} = useSelector(state => state.userReducer)
+  const { email, token, id } = useSelector((state) => state.userReducer)
 
   return {
     isAuth: !!email,
