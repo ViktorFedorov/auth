@@ -1,5 +1,5 @@
-import {createStore} from 'redux'
-import {combineReducers} from 'redux'
+import { createStore } from 'redux'
+import { combineReducers } from 'redux'
 
 const initialState = {
   email: null,
@@ -12,8 +12,8 @@ const userReducer = (state = initialState, action) => {
     case 'SET_USER':
       return {
         email: action.payload.email,
-        token: action.payload.token,
-        id: action.payload.id
+        token: action.payload.accessToken,
+        id: action.payload.uid
       }
     case 'REMOVE_USER':
       return {
